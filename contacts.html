@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="settings/main-settings.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="contacts.css">
+
+    <title>Contacts</title>
+    <script>
+    if (localStorage.getItem("theme") === "true") {
+        document.documentElement.classList.add("switch");
+    }
+    </script>
+</head>
+<body id="all-page">
+    
+    <header>
+        <a href="index.html">Main</a>
+        <a href="#">Projects</a>
+        <a href="#">Contacts</a>
+        <button id="btn"><img src="pic/side.png"></button>
+    </header>
+
+    <div class="all">
+        <div class="social-links hidden">
+            <ul class="list">
+
+            <li><img src="contact-pic/phone.png"><a href="#">+7-776-###-42-34</a></li>
+            <li><img src="contact-pic/instagram.png"><a href="#">a_imanzd</a></li>
+            <li><img src="contact-pic/facebook.png"><a href="#">Aisultan Imanzada</a></li>
+            <li><img src="contact-pic/telegram.png"><a href="#"> a_imanzd</a></li>
+            <li><img src="contact-pic/youtube.png"><a href= "https://www.youtube.com/@a_imanzd" >My Channel</a></li>
+            <li><img src="contact-pic/gmail.png.png"><a href="#">aysultan7889@gmail.com</a></li>
+
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="main-scrp.js"></script>
+</html>

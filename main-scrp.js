@@ -1,14 +1,18 @@
 let btn = document.getElementById("btn");
 let allpage = document.getElementById("all-page");
-let bool = false;
+let bool = localStorage.getItem("theme") === "true";
+
+
 
 btn.addEventListener('click', () => {
     bool = !bool;
     if (bool) {
-        allpage.classList.add("switch");
+        document.documentElement.classList.add("switch");
     } else {
-        allpage.classList.remove("switch");
+        document.documentElement.classList.remove("switch");
     }
+
+    localStorage.setItem("theme", bool);
 });
 
 

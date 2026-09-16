@@ -1,0 +1,61 @@
+:root {
+    --bg-color: rgb(19, 19, 19);
+    --color: white;
+    --p-color:  rgb(156, 156, 156);
+    --light: white;
+    --dark: black;
+    --filter: 0%;
+    --invert:  invert(100%) hue-rotate(180deg) brightness(70%) contrast(90%);
+    --head: rgb(30, 40, 44);
+}
+.switch {
+    --bg-color: rgb(228, 228, 228);
+    --color: black;
+    --p-color:  rgb(44, 44, 44);
+    --light: black;
+    --dark: white;
+    --filter: 100%;
+    --invert:  invert(0%) hue-rotate(0%) brightness(70%) contrast(90%);
+    --head: rgb(164, 151, 197);
+}
+body {background-color: var(--bg-color);transition: 0.1s ease-out;}
+.all {padding: 7% 31%;}
+
+.social-links {font-family: 'Montserrat', sans-serif; font-optical-sizing:auto;}
+.list {
+    position: relative;
+    list-style: none;
+    text-decoration: none;
+
+    border: 1px dashed var(--head);
+    border-radius: 30px;
+    padding: 10px;
+}
+.list li {
+    display: flex;
+    align-content: center;
+    justify-content: start;
+    gap: 40%;
+    margin: 20px;
+}
+.list img {
+    position:relative;
+    width: 50px;
+    height: 50px;
+
+    filter: grayscale(100%) brightness(60%) contrast(100%);
+    user-select: none;
+}
+.list a {
+    color: var(--p-color);
+    position: relative;
+    align-content: center;
+    text-decoration: none;
+
+    transition: 0.2s ease-out;
+}
+.list a:hover {
+    color: var(--light);
+    font-weight: 700;
+    letter-spacing: 2px;
+}

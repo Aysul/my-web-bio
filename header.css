@@ -1,3 +1,6 @@
+html {
+    overflow-y: scroll;
+}
 :root {
     --bg-color: rgb(19, 19, 19);
     --p-color:  rgb(199, 199, 199);
@@ -50,6 +53,3 @@ button img {
     filter: brightness(var(--clr-btn));
     user-select: none;
 }
-
-.hidden {opacity: 0;transform: translateY(20px); transition: 0.6s ease-out;}
-.show {opacity: 1;transform: translateY(0);}
