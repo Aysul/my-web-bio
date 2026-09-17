@@ -1,0 +1,55 @@
+:root {
+    --bg-color: rgb(19, 19, 19);
+    --color: white;
+    --p-color:  rgb(199, 199, 199);
+    --light: white;
+    --dark: black;
+    --filter: 0%;
+    --invert:  invert(100%) hue-rotate(180deg) brightness(70%) contrast(90%);
+    --head: rgb(30, 40, 44);
+}
+.switch {
+    --bg-color: rgb(228, 228, 228);
+    --color: black;
+    --p-color:  rgb(44, 44, 44);
+    --light: black;
+    --dark: white;
+    --filter: 100%;
+    --invert:  invert(0%) hue-rotate(0%) brightness(70%) contrast(90%);
+    --head: rgb(164, 151, 197);
+}
+body {background-color: var(--bg-color);transition: 0.1s ease-out;}
+.all {padding: 0% 31%;}
+
+.text {
+    width: 100%;    
+    text-align: center;
+    justify-content: center;
+}
+.text h1 {
+    color: var(--p-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    position: relative;
+    align-content:end;
+    height: 500px;
+    animation: pulsed 2s ease-in-out infinite;
+    user-select: none;
+}
+@keyframes pulsed {
+    0% {
+        font-weight: 300;
+        letter-spacing: 0px;
+        opacity: 0.4;
+    }
+    50% {
+        font-weight: 500;
+        letter-spacing: 1px;
+        opacity: 1;
+    }
+    100% {
+        font-weight: 300;
+        letter-spacing: 0px;
+        opacity: 0.4;
+    }
+}
