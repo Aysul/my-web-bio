@@ -147,37 +147,70 @@ body {
     letter-spacing: 1px;
 }
 
+.projects-text {
+    color: var(--p-color);
+    font-family: 'raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 25px 0;
+}
 .projects {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     font-family: 'raleway', sans-serif;
 }
 .project {
-    display: inline;
     position: relative;
-    width: 45%;
-    height: 350px;
-
+    height: 325px;
+    padding: 5px 7px;
     border: 1px dashed var(--head);
     border-radius: 20px;
 }
+.project::before {
+    border-radius: 20px;
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+        400px circle at var(--x) var(--y),
+        rgba(85, 85, 85, 0.35),
+        transparent 70%);
+    opacity: 0;
+    transition: 0.2s;
+    z-index: 0;
+}
+.project:hover::before {
+    opacity: 1;
+}
 .project img {
-    position: relative;
-    width: 90%;
-    height: auto;
-    margin: 10px 15px;
-
+    display: block;
+    width: 350px;
+    height: 150px;
+    margin: 0 auto;
     border-radius: 15px;
+    object-fit: cover;
+    object-position: 0 0;
+    filter: grayscale(70%);
+    transition: 1s ease-out;
+    z-index: 1;
+}
+.project img:hover {
+    animation: al 2s infinite ease-in-out;
+    scale: 101%;
+    filter: grayscale(0%);
+    z-index: 1;
 }
 .project h1 {
-    margin: auto 18px;
+    padding: 11px 10px;
     color: var(--light);
-    font-size: 22px;
+    font-size: 16px;
 }
 .project p {
-    margin:  0px 20px;
+    margin:  0 10px;
     color: var(--p-color);
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
@@ -214,6 +247,7 @@ body {
 
     cursor: pointer;
     user-select: none;
+    transition: 0.5s ease;
 }
 .lang:has(img:hover) img {
     opacity: 0.5;
@@ -256,6 +290,20 @@ body {
     width: 600px;
     height: 250px;
     filter: var(--invert);
-
     user-select: none;
+}
+
+@keyframes al {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(0.5deg);
+    }
+    75% {
+        transform: rotate(-0.5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }

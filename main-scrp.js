@@ -28,3 +28,18 @@ let observer = new IntersectionObserver((entries) => {
 objects.forEach((object) => {
     observer.observe(object);
 });
+
+
+const prj = document.querySelectorAll(".project");
+
+prj.forEach((card) => {
+    card.addEventListener("mousemove", (eve) => {
+    const rec = card.getBoundingClientRect();
+
+    const x = eve.clientX - rec.left;
+    const y = eve.clientY - rec.top;
+
+    card.style.setProperty("--x", `${x}px`);
+    card.style.setProperty("--y", `${y}px`);
+});
+});
