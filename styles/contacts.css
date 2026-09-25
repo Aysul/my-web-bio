@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
     --bg-color: rgb(19, 19, 19);
     --color: white;
@@ -21,7 +22,7 @@
 body {background-color: var(--bg-color);transition: 0.1s ease-out;}
 .all {padding: 7% 31%;}
 
-.social-links {font-family: 'Montserrat', sans-serif; font-optical-sizing:auto;}
+.social-links {font-family: 'raleway', sans-serif; font-optical-sizing:auto;}
 .list {
     position: relative;
     list-style: none;

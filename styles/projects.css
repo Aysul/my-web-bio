@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --bg-color: rgb(19, 19, 19);
+    --color: white;
+    --p-color:  rgb(199, 199, 199);
+    --light: white;
+    --dark: black;
+    --filter: 0%;
+    --invert:  invert(100%) hue-rotate(180deg) brightness(70%) contrast(90%);
+    --head: rgb(30, 40, 44);
+}
+.switch {
+    --bg-color: rgb(228, 228, 228);
+    --color: black;
+    --p-color:  rgb(44, 44, 44);
+    --light: black;
+    --dark: white;
+    --filter: 100%;
+    --invert:  invert(0%) hue-rotate(0%) brightness(70%) contrast(90%);
+    --head: rgb(164, 151, 197);
+}
+body {background-color: var(--bg-color);transition: 0.1s ease-out; outline: 1px;}
+.all {width: 38%; margin: 0% auto;font-family: 'raleway', sans-serif;}
+
+.text {
+    padding-top: 20%;
+}
+.text h1 {
+    font-weight: 200;
+    color: var(--light);
+}
+.projects {
+    padding: 10% 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.project {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px dashed var(--head);
+    border-radius: 15px;
+
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.project::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+        400px circle at var(--x) var(--y),
+        rgba(59, 59, 59, 0.247),
+        transparent 70%);
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.2s;
+    z-index: 0;
+}
+.project:hover::before{
+    opacity: 1;
+}
+.project img {
+    display: block;
+    margin: 3px auto;
+    width: 290px;
+    height: 180px;
+    object-fit: cover;
+    object-position: -10px -0px;
+    border-radius: 10px;
+    z-index: 1;
+}
+.project h2 {
+    font-size: 16px;
+    font-weight: 300;
+    padding: 10px 10px;
+    color: var(--light);
+}
+.project p {
+    font-size: 12px;
+    font-weight: 200;
+    color: var(--p-color);
+    padding: 10px;
+}
+.project:hover {
+    transform: translateY(-2%);
+}
+
