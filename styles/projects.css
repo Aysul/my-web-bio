@@ -33,7 +33,7 @@ body {background-color: var(--bg-color);transition: 0.1s ease-out; outline: 1px;
     padding: 10% 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 0px;
 }
 .project {
     position: relative;
@@ -43,7 +43,6 @@ body {background-color: var(--bg-color);transition: 0.1s ease-out; outline: 1px;
     border-radius: 15px;
 
     transition: 0.2s ease;
-    cursor: pointer;
 }
 .project::before {
     content: "";
@@ -68,9 +67,12 @@ body {background-color: var(--bg-color);transition: 0.1s ease-out; outline: 1px;
     width: 290px;
     height: 180px;
     object-fit: cover;
-    object-position: -10px -0px;
+    object-position: 0px -0px;
     border-radius: 10px;
     z-index: 1;
+
+    transition: 0.5s ease-out;
+    cursor: pointer;
 }
 .project h2 {
     font-size: 16px;
@@ -86,5 +88,8 @@ body {background-color: var(--bg-color);transition: 0.1s ease-out; outline: 1px;
 }
 .project:hover {
     transform: translateY(-2%);
+}
+.project:hover img {
+    transform: scale(1.02);
 }
 
